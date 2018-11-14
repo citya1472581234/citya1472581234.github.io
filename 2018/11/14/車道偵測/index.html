@@ -79,21 +79,25 @@
 
 
 
-<meta name="description" content="cycle gan  pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通道變六通道的疊加圖,整體結構如下:  ​        patch gan 將圖像分成NxN的patch,來減少運行時間,還能更好的處理大圖片的細節  Unet 類似 auto encoder  + residual , 來減輕訓練的負擔 ,整體結構如下:    convolution auto encod">
+<meta name="description" content="cycle gan  整個cycle可以看成是一個autoencoder,兩個generator看成是encoder和decoder,而兩個discriminator則是準則,整體架構如下:   loss 方面,有兩個判別網路的loss,還有兩個生成網路的loss,最後是L1 loss(希望生成圖像，與輸入圖像很接近)     pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通">
 <meta property="og:type" content="article">
 <meta property="og:title" content="車道偵測">
 <meta property="og:url" content="http://yoursite.com/2018/11/14/車道偵測/index.html">
 <meta property="og:site_name" content="Yo">
-<meta property="og:description" content="cycle gan  pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通道變六通道的疊加圖,整體結構如下:  ​        patch gan 將圖像分成NxN的patch,來減少運行時間,還能更好的處理大圖片的細節  Unet 類似 auto encoder  + residual , 來減輕訓練的負擔 ,整體結構如下:    convolution auto encod">
+<meta property="og:description" content="cycle gan  整個cycle可以看成是一個autoencoder,兩個generator看成是encoder和decoder,而兩個discriminator則是準則,整體架構如下:   loss 方面,有兩個判別網路的loss,還有兩個生成網路的loss,最後是L1 loss(希望生成圖像，與輸入圖像很接近)     pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:image" content="http://yoursite.com/2018/11/14/車道偵測/cyclegan.png">
+<meta property="og:image" content="http://yoursite.com/2018/11/14/車道偵測/cycleganloss.png">
 <meta property="og:image" content="http://yoursite.com/2018/11/14/車道偵測/pix2pix.jpg">
 <meta property="og:image" content="http://yoursite.com/2018/11/14/車道偵測/patch.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/11/14/車道偵測/pix2pixloss.jpeg">
 <meta property="og:image" content="http://yoursite.com/2018/11/14/車道偵測/unet.jpg">
-<meta property="og:updated_time" content="2018-11-14T14:28:19.155Z">
+<meta property="og:image" content="http://yoursite.com/2018/11/14/車道偵測/cae.png">
+<meta property="og:updated_time" content="2018-11-14T15:10:37.900Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="車道偵測">
-<meta name="twitter:description" content="cycle gan  pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通道變六通道的疊加圖,整體結構如下:  ​        patch gan 將圖像分成NxN的patch,來減少運行時間,還能更好的處理大圖片的細節  Unet 類似 auto encoder  + residual , 來減輕訓練的負擔 ,整體結構如下:    convolution auto encod">
-<meta name="twitter:image" content="http://yoursite.com/2018/11/14/車道偵測/pix2pix.jpg">
+<meta name="twitter:description" content="cycle gan  整個cycle可以看成是一個autoencoder,兩個generator看成是encoder和decoder,而兩個discriminator則是準則,整體架構如下:   loss 方面,有兩個判別網路的loss,還有兩個生成網路的loss,最後是L1 loss(希望生成圖像，與輸入圖像很接近)     pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/14/車道偵測/cyclegan.png">
 
 
 
@@ -315,6 +319,14 @@
       
         <ul>
 <li><p>cycle gan</p>
+<ul>
+<li><p>整個cycle可以看成是一個autoencoder,兩個generator看成是encoder和decoder,而兩個discriminator則是準則,整體架構如下:</p>
+<p><img src="/2018/11/14/車道偵測/cyclegan.png" alt="cyclegan"></p>
+</li>
+<li><p>loss 方面,有兩個判別網路的loss,還有兩個生成網路的loss,最後是L1 loss(希望生成圖像，與輸入圖像很接近)</p>
+<p><img src="/2018/11/14/車道偵測/cycleganloss.png" alt="cycleganloss"></p>
+</li>
+</ul>
 </li>
 <li><p>pix2pix</p>
 <ul>
@@ -325,12 +337,18 @@
 <li><p>patch gan</p>
 <p>將圖像分成NxN的patch,來減少運行時間,還能更好的處理大圖片的細節<img src="/2018/11/14/車道偵測/patch.jpg" alt="patch"></p>
 </li>
+<li><p>loss 方面,有一個gan的loss,和L1 loss</p>
+<p><img src="/2018/11/14/車道偵測/pix2pixloss.jpeg" alt="pix2pixloss"></p>
+</li>
 <li><p>Unet</p>
 <p>類似 auto encoder  + residual , 來減輕訓練的負擔 ,整體結構如下:<img src="/2018/11/14/車道偵測/unet.jpg" alt="unet"></p>
 </li>
 </ul>
 </li>
 <li><p>convolution auto encoder</p>
+<ul>
+<li>將圖片經由conv壓縮成向量,在deconv重構成原來圖片<img src="/2018/11/14/車道偵測/cae.png" alt="cae"></li>
+</ul>
 </li>
 </ul>
 
