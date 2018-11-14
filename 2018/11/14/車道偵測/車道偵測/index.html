@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="cycle gan  pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通道變六通道的疊加圖,整體結構如下:  ​        ![] (車道偵測/pix2pix.jpg)  patch gan 將圖像分成NxN的patch,來減少運行時間,還能更好的處理大圖片的細節   ![] (車道偵測/patch.jpg)  Unet 類似 auto encoder  + residua">
+<meta property="og:type" content="article">
+<meta property="og:title" content="車道偵測">
+<meta property="og:url" content="http://yoursite.com/2018/11/14/車道偵測/車道偵測/index.html">
 <meta property="og:site_name" content="Yo">
+<meta property="og:description" content="cycle gan  pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通道變六通道的疊加圖,整體結構如下:  ​        ![] (車道偵測/pix2pix.jpg)  patch gan 將圖像分成NxN的patch,來減少運行時間,還能更好的處理大圖片的細節   ![] (車道偵測/patch.jpg)  Unet 類似 auto encoder  + residua">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2018-11-14T13:51:12.917Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yo">
+<meta name="twitter:title" content="車道偵測">
+<meta name="twitter:description" content="cycle gan  pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通道變六通道的疊加圖,整體結構如下:  ​        ![] (車道偵測/pix2pix.jpg)  patch gan 將圖像分成NxN的patch,來減少運行時間,還能更好的處理大圖片的細節   ![] (車道偵測/patch.jpg)  Unet 類似 auto encoder  + residua">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/14/車道偵測/車道偵測/">
 
 
 
 
 
-  <title>Yo</title>
+  <title>車道偵測 | Yo</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -224,150 +227,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/14/車道偵測/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="https://github.com/citya1472581234/citya1472581234.github.io/blob/master/uploads/pic.jpg?raw=true">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Yo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/14/車道偵測/" itemprop="url">車道偵測</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">發表於</span>
-              
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-11-14T21:15:30+08:00">
-                2018-11-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ul>
-<li><p>cycle gan</p>
-</li>
-<li><p>pix2pix</p>
-<ul>
-<li>判別網路將兩張圖片組成一個 pair ,輸入從三通道變六通道的疊加圖,整體結構如下:</li>
-</ul>
-<p>​        ![] (車道偵測/pix2pix.jpg)</p>
-<ul>
-<li><p>patch gan</p>
-<p>將圖像分成NxN的patch,來減少運行時間,還能更好的處理大圖片的細節</p>
-<p>  ![] (車道偵測/patch.jpg)</p>
-</li>
-<li><p>Unet</p>
-<p>類似 auto encoder  + residual , 來減輕訓練的負擔 ,整體結構如下:</p>
-<p>  ![] (車道偵測/unet.jpg)</p>
-</li>
-</ul>
-</li>
-<li><p>convolution auto encoder</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -397,9 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/14/車道偵測/車道偵測/" itemprop="url">車道偵測</a></h1>
+          <h1 class="post-title" itemprop="name headline">車道偵測</h1>
         
 
         <div class="post-meta">
@@ -449,9 +309,7 @@
       
 
       
-        
-          
-            <ul>
+        <ul>
 <li><p>cycle gan</p>
 </li>
 <li><p>pix2pix</p>
@@ -474,8 +332,6 @@
 </li>
 </ul>
 
-          
-        
       
     </div>
     
@@ -492,12 +348,28 @@
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/11/14/車道偵測/" rel="prev" title="車道偵測">
+                車道偵測 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -507,10 +379,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -518,6 +391,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -740,6 +617,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
