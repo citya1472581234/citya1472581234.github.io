@@ -79,17 +79,13 @@
 
 
 
-<meta name="description" content="哈囉~~寫下我的學習歷程~">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Yo">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Yo">
-<meta property="og:description" content="哈囉~~寫下我的學習歷程~">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2018-11-13T15:12:54.868Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Yo">
-<meta name="twitter:description" content="哈囉~~寫下我的學習歷程~">
 
 
 
@@ -119,13 +115,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/">
+  <link rel="canonical" href="http://yoursite.com/">
 
 
 
 
 
-  <title> | Yo</title>
+  <title>Yo</title>
   
 
 
@@ -144,7 +140,8 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -227,38 +224,152 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
+  <section id="posts" class="posts-expand">
+    
+      
 
-  <div id="posts" class="posts-expand">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/14/車道偵測/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://github.com/citya1472581234/citya1472581234.github.io/blob/master/uploads/pic.jpg?raw=true">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yo">
+    </span>
+
     
-    
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <h1 id="哈囉"><a href="#哈囉" class="headerlink" title="哈囉~~"></a>哈囉~~</h1><p>寫下我的學習歷程~</p>
-
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/14/車道偵測/" itemprop="url">車道偵測</a></h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-11-14T21:15:30+08:00">
+                2018-11-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        
+          
+            <ul>
+<li><p>cycle gan</p>
+</li>
+<li><p>pix2pix</p>
+<ul>
+<li>判別網路將兩張圖片組成一個 pair ,輸入從三通道變六通道的疊加圖,整體結構如下:</li>
+</ul>
+<p>​        </p>
+<ul>
+<li><p>patch gan</p>
+<p>將圖像分成NxN的patch,來減少運行時間,還能更好的處理大圖片的細節</p>
+  
+</li>
+<li><p>Unet</p>
+<p>類似 auto encoder  + residual , 來減輕訓練的負擔 ,整體結構如下:</p>
+  
+</li>
+</ul>
+</li>
+<li><p>convolution auto encoder</p>
+</li>
+</ul>
+
+          
+        
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
 
 
           </div>
@@ -266,10 +377,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -290,17 +397,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目錄
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            本站概覽
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -354,22 +452,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#哈囉"><span class="nav-number">1.</span> <span class="nav-text">哈囉~~</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -517,10 +599,6 @@
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
