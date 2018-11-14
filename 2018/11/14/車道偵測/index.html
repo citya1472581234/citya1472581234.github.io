@@ -79,17 +79,19 @@
 
 
 
-<meta name="description" content="cycle gan  pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通道變六通道的疊加圖,整體結構如下:  ​         ![] (pix2pix.jpg)  patch gan 將圖像分成NxN的patch,來減少運行時間,還能更好的處理大圖片的細節   ![] (車道偵測/patch.jpg)  Unet 類似 auto encoder  + residual ,">
+<meta name="description" content="cycle gan  pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通道變六通道的疊加圖,整體結構如下:  ​        patch gan 將圖像分成NxN的patch,來減少運行時間,還能更好的處理大圖片的細節   ![patch] (/車道偵測/patch.jpg)  Unet 類似 auto encoder  + residual , 來減輕訓練的負擔 ,整體結構">
 <meta property="og:type" content="article">
 <meta property="og:title" content="車道偵測">
 <meta property="og:url" content="http://yoursite.com/2018/11/14/車道偵測/index.html">
 <meta property="og:site_name" content="Yo">
-<meta property="og:description" content="cycle gan  pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通道變六通道的疊加圖,整體結構如下:  ​         ![] (pix2pix.jpg)  patch gan 將圖像分成NxN的patch,來減少運行時間,還能更好的處理大圖片的細節   ![] (車道偵測/patch.jpg)  Unet 類似 auto encoder  + residual ,">
+<meta property="og:description" content="cycle gan  pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通道變六通道的疊加圖,整體結構如下:  ​        patch gan 將圖像分成NxN的patch,來減少運行時間,還能更好的處理大圖片的細節   ![patch] (/車道偵測/patch.jpg)  Unet 類似 auto encoder  + residual , 來減輕訓練的負擔 ,整體結構">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2018-11-14T14:20:46.375Z">
+<meta property="og:image" content="http://yoursite.com/2018/11/14/車道偵測/pix2pix.jpg">
+<meta property="og:updated_time" content="2018-11-14T14:25:47.189Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="車道偵測">
-<meta name="twitter:description" content="cycle gan  pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通道變六通道的疊加圖,整體結構如下:  ​         ![] (pix2pix.jpg)  patch gan 將圖像分成NxN的patch,來減少運行時間,還能更好的處理大圖片的細節   ![] (車道偵測/patch.jpg)  Unet 類似 auto encoder  + residual ,">
+<meta name="twitter:description" content="cycle gan  pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通道變六通道的疊加圖,整體結構如下:  ​        patch gan 將圖像分成NxN的patch,來減少運行時間,還能更好的處理大圖片的細節   ![patch] (/車道偵測/patch.jpg)  Unet 類似 auto encoder  + residual , 來減輕訓練的負擔 ,整體結構">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/14/車道偵測/pix2pix.jpg">
 
 
 
@@ -316,15 +318,15 @@
 <ul>
 <li>判別網路將兩張圖片組成一個 pair ,輸入從三通道變六通道的疊加圖,整體結構如下:</li>
 </ul>
-<p>​         ![] (pix2pix.jpg)</p>
+<p>​      <img src="/2018/11/14/車道偵測/pix2pix.jpg" alt="pix2pix"></p>
 <ul>
 <li><p>patch gan</p>
 <p>將圖像分成NxN的patch,來減少運行時間,還能更好的處理大圖片的細節</p>
-<p>  ![] (車道偵測/patch.jpg)</p>
+<p>  ![patch] (/車道偵測/patch.jpg)</p>
 </li>
 <li><p>Unet</p>
 <p>類似 auto encoder  + residual , 來減輕訓練的負擔 ,整體結構如下:</p>
-<p>  ![] (/車道偵測/unet.jpg)</p>
+<p>  ![unet] (/車道偵測/unet.jpg)</p>
 </li>
 </ul>
 </li>
