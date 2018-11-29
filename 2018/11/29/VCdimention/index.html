@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Yo">
 <meta property="og:description" content="​    主要的概念有 :增長函數（growth function）、對分（dichotomy）、打散（shattering）和中斷點（break point）  增長函數 : 增長函數表示空間H對m個數據所能賦予標記的最大可能結果數  假設現在有A、B兩點，考慮二分類的情況，可能的值有：AA、AB、BA和BB，所以這裡增長函數為4。   對分 : 假定我們的Hypothesis Set H是一個">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2018-11-29T14:27:45.265Z">
+<meta property="og:updated_time" content="2018-11-29T14:29:21.368Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VC dimention">
 <meta name="twitter:description" content="​    主要的概念有 :增長函數（growth function）、對分（dichotomy）、打散（shattering）和中斷點（break point）  增長函數 : 增長函數表示空間H對m個數據所能賦予標記的最大可能結果數  假設現在有A、B兩點，考慮二分類的情況，可能的值有：AA、AB、BA和BB，所以這裡增長函數為4。   對分 : 假定我們的Hypothesis Set H是一個">
@@ -343,21 +343,16 @@
 </li>
 <li><p>打散 : 指的是假設空間H能實現數據集D上全部示例的對分，即增長函數$2^m$</p>
 </li>
-<li><p>Vapink-Chervonenkis Dimension : 在於我們以前是無法約束hypothesis的數量的。在Hoeffding’s Inequality中，$P[|E_{in}-E_{out}|&gt;\epsilon]\leq2Me^{-2\epsilon^2N}$其中的M，也就是Hypothesis Set H的勢為無窮大，在<strong>Generalization Bound</strong>中，$E_{out}\leq E_{in}(g)+(\frac{1}{2N}ln\frac{2M}{\delta})^{0.5}$<br>M也是無窮大，導致無法判斷學習的<strong>可行性</strong>，所以我們必須找到有限的M</p>
+<li><p>Vapink-Chervonenkis Dimension : 在於我們以前是無法約束hypothesis的數量的。在Hoeffding’s Inequality中，$P[|E_{in}-E_{out}|&gt;\epsilon]\leq2Me^{-2\epsilon^2N}$其中的M，也就是Hypothesis Set H的勢為無窮大，在<strong>Generalization Bound</strong>中，$E_{out}\leq E_{in}(g)+(\frac{1}{2N}ln\frac{2M}{\delta})^{0.5}$<br> M也是無窮大，導致無法判斷學習的<strong>可行性</strong>，所以我們必須找到有限的M</p>
 </li>
 </ol>
 <ol start="5">
-<li><p>Growth function : Growth function是指針對任意N個點的最多的dichotomy數，而前面的集合M是指對於特定的一個data set所能產生的dichotomy的集合，也就是說<br>$m_H(N) = max|H(x1,x2,…,x_N)|$</p>
+<li><p>Growth function : Growth function是指針對任意N個點的最多的dichotomy數，而前面的集合M是指對於特定的一個data set所能產生的dichotomy的集合，也就是說$m_H(N) = max|H(x1,x2,…,x_N)|$</p>
 <blockquote>
 <p>定義H為一個平面中的所有直線，若一個點在直線的一邊，則return +1，否則return -1。</p>
-</blockquote>
-<blockquote>
 <p>N=3時，Growth function的值為8</p>
-</blockquote>
-<blockquote>
-<p>N=4時，Growth function的值為14，所以<br>$ m_H(N)&lt;2^N$<br>如果break point存在，m_{H}(N)就是一个polynomial</p>
-</blockquote>
-<blockquote>
+<p>N=4時，Growth function的值為14，所以</p>
+<p>$ m_H(N)&lt;2^N$<br>如果break point存在，m_{H}(N)就是一个polynomial</p>
 <p>對於這個例子，<strong>break point</strong> 為 4</p>
 </blockquote>
 </li>
