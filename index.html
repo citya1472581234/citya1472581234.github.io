@@ -239,6 +239,163 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://citya1472581234.github.io/2018/12/03/logistic-regression/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://github.com/citya1472581234/citya1472581234.github.io/blob/master/uploads/pic.jpg?raw=true">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/12/03/logistic-regression/" itemprop="url">[logistic_regression]</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-12-03T18:56:50+08:00">
+                2018-12-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/機器學習/" itemprop="url" rel="index">
+                    <span itemprop="name">機器學習</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><p>為何 logistic regression 要求  maximum likelihood ?</p>
+<p>在機器學習中，我們通常是最小化損失函數，但在logistic regression 中，我們求 maximum likelihood，兩者是等效的。<br>$$<br>P(Y=1|x)=\pi(x) , P(Y=0|x)=1-\pi(x)<br>$$</p>
+<p>$$<br>likelihood-&gt;L(w) = \prod[\pi(x_i)]^{y_i}[1-\pi(x_i)]^{1-y_i}<br>$$</p>
+<p>$$<br>\begin{align}<br>log likelihood-&gt;lnL(w) =&amp; \sum[y_iln\pi(x_i)+(1-y_iln(1-\pi(x_i)))] \=&amp; \sum[y_iln\frac{\pi(x_i)}{1-\pi(x_i)}+ln(1-\pi(x_i))] \ max\quad lnL(w) = &amp;min \quad-lnL(w)\取整個數據的平均對數似然損失 J(w)=&amp;-\frac{1}{N}lnL(w)\所以最大化似然函數與最&amp;小化對數似然損失是等價的 ~!!<br>\end{align}<br>$$</p>
+</li>
+<li><p>logistic regression 跟 maximum entropy model 關係?</p>
+<p>其實兩者 logistic regression就是 maximum entropy model 類別為兩類的情況，當處理多類別時，就是 maximum entropy model。</p>
+</li>
+<li><p>sigmoid 跟 softmax  關係?</p>
+<p>softmax  可以處理多類別，當類別為二元分類時即是 sigmoid</p>
+</li>
+<li><p>牛頓法</p>
+<p><a href="https://ccjou.wordpress.com/2013/07/08/%E7%89%9B%E9%A0%93%E6%B3%95%E2%94%80%E2%94%80%E9%9D%9E%E7%B7%9A%E6%80%A7%E6%96%B9%E7%A8%8B%E7%9A%84%E6%B1%82%E6%A0%B9%E6%96%B9%E6%B3%95/" target="_blank" rel="noopener">https://ccjou.wordpress.com/2013/07/08/%E7%89%9B%E9%A0%93%E6%B3%95%E2%94%80%E2%94%80%E9%9D%9E%E7%B7%9A%E6%80%A7%E6%96%B9%E7%A8%8B%E7%9A%84%E6%B1%82%E6%A0%B9%E6%96%B9%E6%B3%95/</a></p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://citya1472581234.github.io/2018/11/29/VCdimention/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -616,7 +773,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>
