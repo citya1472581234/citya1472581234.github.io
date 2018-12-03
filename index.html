@@ -336,13 +336,13 @@
 <li><p>為何 logistic regression 要求  maximum likelihood ?</p>
 <p>在機器學習中，我們通常是最小化損失函數，但在logistic regression 中，我們求 maximum likelihood，兩者是等效的。<br>$$<br>P(Y=1|x)=\pi(x) , P(Y=0|x)=1-\pi(x)<br>$$</p>
 <p>$$<br>likelihood-&gt;L(w) = \prod[\pi(x_i)]^{y_i}[1-\pi(x_i)]^{1-y_i}<br>$$</p>
-<p>$$<br>\begin{align}<br>log likelihood-&gt;lnL(w) =&amp; \sum[y_iln\pi(x_i)+(1-y_iln(1-\pi(x_i)))] \<br>=&amp; \sum[y_iln\frac{\pi(x_i)}{1-\pi(x_i)}+ln(1-\pi(x_i))] \<br>max\quad lnL(w) = &amp;min \quad-lnL(w)\<br>取整個數據的平均對數似然損失 J(w)=&amp;-\frac{1}{N}lnL(w)\<br>所以最大化似然函數與最&amp;小化對數似然損失是等價的 !!<br>\end{align}<br>$$</p>
+<p>$$<br>\begin{align}<br>log likelihood-&gt;lnL(w) =&amp; \sum[y_iln\pi(x_i)+(1-y_iln(1-\pi(x_i)))] \<br>=&amp; \sum[y_iln\frac{\pi(x_i)}{1-\pi(x_i)}+ln(1-\pi(x_i))] \<br>max\quad lnL(w) = &amp; min \quad-lnL(w)\<br>取整個數據的平均對數似然損失 J(w)=&amp;-\frac{1}{N}lnL(w)\<br>所以最大化似然函數與最&amp;小化對數似然損失是等價的 !!<br>\end{align}<br>$$</p>
 </li>
 <li><p>logistic regression 跟 maximum entropy model 關係?</p>
 <p>其實兩者 logistic regression就是 maximum entropy model 類別為兩類的情況，當處理多類別時，就是 maximum entropy model。</p>
 </li>
 <li><p>sigmoid 跟 softmax  關係?</p>
-<p>softmax  可以處理多類別，當類別為二元分類時即是 sigmoid</p>
+<p>softmax  可以處理多類別，當類別為二元分類時即是 sigmoid。</p>
 </li>
 <li><p>牛頓法</p>
 <p><a href="https://ccjou.wordpress.com/2013/07/08/%E7%89%9B%E9%A0%93%E6%B3%95%E2%94%80%E2%94%80%E9%9D%9E%E7%B7%9A%E6%80%A7%E6%96%B9%E7%A8%8B%E7%9A%84%E6%B1%82%E6%A0%B9%E6%96%B9%E6%B3%95/" target="_blank" rel="noopener">https://ccjou.wordpress.com/2013/07/08/%E7%89%9B%E9%A0%93%E6%B3%95%E2%94%80%E2%94%80%E9%9D%9E%E7%B7%9A%E6%80%A7%E6%96%B9%E7%A8%8B%E7%9A%84%E6%B1%82%E6%A0%B9%E6%96%B9%E6%B3%95/</a></p>
