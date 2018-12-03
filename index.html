@@ -336,7 +336,11 @@
 <li><p>為何 logistic regression 要求  maximum likelihood ?</p>
 <p>在機器學習中，我們通常是最小化損失函數，但在logistic regression 中，我們求 maximum likelihood，兩者是等效的。<br>$$<br>P(Y=1|x)=\pi(x) , P(Y=0|x)=1-\pi(x)<br>$$</p>
 <p>$$<br>likelihood-&gt;L(w) = \prod[\pi(x_i)]^{y_i}[1-\pi(x_i)]^{1-y_i}<br>$$</p>
-<p>$$<br>\begin{align}<br>log likelihood-&gt;lnL(w) &amp;= \sum[y_iln\pi(x_i)+(1-y_iln(1-\pi(x_i)))] \<br>&amp;=\sum[y_iln\frac{\pi(x_i)}{1-\pi(x_i)}+ln(1-\pi(x_i))] \<br>max\quad lnL(w) &amp;=  min \quad-lnL(w) \<br>取整個數據的平均對數似然損失 J(w)&amp;= -\frac{1}{N}lnL(w) \<br>所以最大化似然函數與最&amp;小化對數似然損失是等價的 !!<br>\end{align}<br>$$</p>
+<p>$$<br>log likelihood-&gt;lnL(w) = \sum[y_iln\pi(x_i)+(1-y_iln(1-\pi(x_i)))]<br>$$</p>
+<p>$$<br>\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad=\sum[y_iln\frac{\pi(x_i)}{1-\pi(x_i)}+ln(1-\pi(x_i))]<br>$$</p>
+<p>$$<br>max\quad lnL(w) =  min \quad-lnL(w)<br>$$</p>
+<p>$$<br>取整個數據的平均對數似然損失 J(w) = -\frac{1}{N}lnL(w)<br>$$</p>
+<p>​                        <strong>所以最大化似然函數與最&amp;小化對數似然損失是等價的 !!</strong></p>
 </li>
 <li><p>logistic regression 跟 maximum entropy model 關係?</p>
 <p>其實兩者 logistic regression就是 maximum entropy model 類別為兩類的情況，當處理多類別時，就是 maximum entropy model。</p>
