@@ -87,13 +87,13 @@
 <meta property="og:site_name" content="Yo">
 <meta property="og:description" content="為何 logistic regression 要求  maximum likelihood ? 在機器學習中，我們通常是最小化損失函數，但在logistic regression 中，我們求 maximum likelihood，兩者是等效的。$$P(Y=1|x)=\pi(x) , P(Y=0|x)=1-\pi(x)$$ $$likelihood-&amp;gt;L(w) = \prod[\pi(x_i">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://citya1472581234.github.io/2018/12/03/logistic-regression/C:/Users/USER/blog/source/_posts/logistic-regression/loss.jpg">
-<meta property="og:image" content="https://citya1472581234.github.io/2018/12/03/logistic-regression/C:/Users/USER/blog/source/_posts/logistic-regression/accuracy.jpg">
-<meta property="og:updated_time" content="2018-12-03T11:06:14.728Z">
+<meta property="og:image" content="https://citya1472581234.github.io/2018/12/03/logistic-regression/loss.jpg">
+<meta property="og:image" content="https://citya1472581234.github.io/2018/12/03/logistic-regression/accuracy.jpg">
+<meta property="og:updated_time" content="2018-12-03T11:12:03.781Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[logistic_regression]">
 <meta name="twitter:description" content="為何 logistic regression 要求  maximum likelihood ? 在機器學習中，我們通常是最小化損失函數，但在logistic regression 中，我們求 maximum likelihood，兩者是等效的。$$P(Y=1|x)=\pi(x) , P(Y=0|x)=1-\pi(x)$$ $$likelihood-&amp;gt;L(w) = \prod[\pi(x_i">
-<meta name="twitter:image" content="https://citya1472581234.github.io/2018/12/03/logistic-regression/C:/Users/USER/blog/source/_posts/logistic-regression/loss.jpg">
+<meta name="twitter:image" content="https://citya1472581234.github.io/2018/12/03/logistic-regression/loss.jpg">
 
 
 
@@ -344,7 +344,7 @@
 <li><p>為何 logistic regression 要求  maximum likelihood ?</p>
 <p>在機器學習中，我們通常是最小化損失函數，但在logistic regression 中，我們求 maximum likelihood，兩者是等效的。<br>$$<br>P(Y=1|x)=\pi(x) , P(Y=0|x)=1-\pi(x)<br>$$</p>
 <p>$$<br>likelihood-&gt;L(w) = \prod[\pi(x_i)]^{y_i}[1-\pi(x_i)]^{1-y_i}<br>$$</p>
-<p>$$<br>\begin{align}<br>log likelihood-&gt;lnL(w) =&amp; \sum[y_iln\pi(x_i)+(1-y_iln(1-\pi(x_i)))] \=&amp; \sum[y_iln\frac{\pi(x_i)}{1-\pi(x_i)}+ln(1-\pi(x_i))] \ max\quad lnL(w) = &amp;min \quad-lnL(w)\取整個數據的平均對數似然損失 J(w)=&amp;-\frac{1}{N}lnL(w)\所以最大化似然函數與最&amp;小化對數似然損失是等價的 ~!!<br>\end{align}<br>$$</p>
+<p>$$<br>\begin{align}<br>log likelihood-&gt;lnL(w) =&amp; \sum[y_iln\pi(x_i)+(1-y_iln(1-\pi(x_i)))] \<br>=&amp; \sum[y_iln\frac{\pi(x_i)}{1-\pi(x_i)}+ln(1-\pi(x_i))] \<br>max\quad lnL(w) = &amp;min \quad-lnL(w)\<br>取整個數據的平均對數似然損失 J(w)=&amp;-\frac{1}{N}lnL(w)\<br>所以最大化似然函數與最&amp;小化對數似然損失是等價的 !!<br>\end{align}<br>$$</p>
 </li>
 <li><p>logistic regression 跟 maximum entropy model 關係?</p>
 <p>其實兩者 logistic regression就是 maximum entropy model 類別為兩類的情況，當處理多類別時，就是 maximum entropy model。</p>
@@ -356,10 +356,10 @@
 <p><a href="https://ccjou.wordpress.com/2013/07/08/%E7%89%9B%E9%A0%93%E6%B3%95%E2%94%80%E2%94%80%E9%9D%9E%E7%B7%9A%E6%80%A7%E6%96%B9%E7%A8%8B%E7%9A%84%E6%B1%82%E6%A0%B9%E6%96%B9%E6%B3%95/" target="_blank" rel="noopener">https://ccjou.wordpress.com/2013/07/08/%E7%89%9B%E9%A0%93%E6%B3%95%E2%94%80%E2%94%80%E9%9D%9E%E7%B7%9A%E6%80%A7%E6%96%B9%E7%A8%8B%E7%9A%84%E6%B1%82%E6%A0%B9%E6%96%B9%E6%B3%95/</a></p>
 </li>
 <li><p>可以使用梯度下降法或牛頓法，這次我採用牛頓法進行實作，以下是實作 logistic regression 的 loss 與 accuracy 的變化。</p>
-<p><img src="/2018/12/03/logistic-regression/C:/Users\USER\blog\source\_posts\logistic-regression\loss.jpg" alt="loss"></p>
+<p><img src="/2018/12/03/logistic-regression/loss.jpg" alt="loss"></p>
 </li>
 </ul>
-<p>​                          <img src="/2018/12/03/logistic-regression/C:/Users\USER\blog\source\_posts\logistic-regression\accuracy.jpg" alt="accuracy"></p>
+<p>​                          <img src="/2018/12/03/logistic-regression/accuracy.jpg" alt="accuracy"></p>
 
       
     </div>
