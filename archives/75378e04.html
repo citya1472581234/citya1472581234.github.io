@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="個人開發,pytorch,GAN,">
+  <meta name="keywords" content="機器學習,">
 
 
 
@@ -79,26 +79,18 @@
 
 
 
-<meta name="description" content="cycle gan  整個cycle可以看成是一個autoencoder,兩個generator看成是encoder和decoder,而兩個discriminator則是準則,整體架構如下:   loss 方面,有兩個判別網路的loss,還有兩個生成網路的loss,最後是L1 loss(希望生成圖像，與輸入圖像很接近)     pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通">
-<meta name="keywords" content="個人開發,pytorch,GAN">
+<meta name="description" content="1.它是一種二類分類模型，目的是找出margine(support vector 到 hyper plane的距離)最大的模型。 2.support vector : 在 margin 邊界上的點  $$magin = |\frac{w^T}{||w||}(x-x’)| = \frac{1}{||w||}|w^Tx+b|$$ $$因為  y_n(w^Tx_n+b)&amp;gt;0 (分類正確)$$ $$">
+<meta name="keywords" content="機器學習">
 <meta property="og:type" content="article">
-<meta property="og:title" content="車道偵測">
-<meta property="og:url" content="https://citya1472581234.github.io/2018/11/14/車道偵測/index.html">
+<meta property="og:title" content="SVM">
+<meta property="og:url" content="https://citya1472581234.github.io/archives/75378e04.html">
 <meta property="og:site_name" content="Yo">
-<meta property="og:description" content="cycle gan  整個cycle可以看成是一個autoencoder,兩個generator看成是encoder和decoder,而兩個discriminator則是準則,整體架構如下:   loss 方面,有兩個判別網路的loss,還有兩個生成網路的loss,最後是L1 loss(希望生成圖像，與輸入圖像很接近)     pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通">
+<meta property="og:description" content="1.它是一種二類分類模型，目的是找出margine(support vector 到 hyper plane的距離)最大的模型。 2.support vector : 在 margin 邊界上的點  $$magin = |\frac{w^T}{||w||}(x-x’)| = \frac{1}{||w||}|w^Tx+b|$$ $$因為  y_n(w^Tx_n+b)&amp;gt;0 (分類正確)$$ $$">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://citya1472581234.github.io/2018/11/14/車道偵測/cyclegan.png">
-<meta property="og:image" content="https://citya1472581234.github.io/2018/11/14/車道偵測/cycleganloss.png">
-<meta property="og:image" content="https://citya1472581234.github.io/2018/11/14/車道偵測/pix2pix.jpg">
-<meta property="og:image" content="https://citya1472581234.github.io/2018/11/14/車道偵測/patch.jpg">
-<meta property="og:image" content="https://citya1472581234.github.io/2018/11/14/車道偵測/pix2pixloss.jpeg">
-<meta property="og:image" content="https://citya1472581234.github.io/2018/11/14/車道偵測/unet.jpg">
-<meta property="og:image" content="https://citya1472581234.github.io/2018/11/14/車道偵測/cae.png">
-<meta property="og:updated_time" content="2018-11-19T13:03:33.183Z">
+<meta property="og:updated_time" content="2018-12-04T12:44:53.157Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="車道偵測">
-<meta name="twitter:description" content="cycle gan  整個cycle可以看成是一個autoencoder,兩個generator看成是encoder和decoder,而兩個discriminator則是準則,整體架構如下:   loss 方面,有兩個判別網路的loss,還有兩個生成網路的loss,最後是L1 loss(希望生成圖像，與輸入圖像很接近)     pix2pix  判別網路將兩張圖片組成一個 pair ,輸入從三通">
-<meta name="twitter:image" content="https://citya1472581234.github.io/2018/11/14/車道偵測/cyclegan.png">
+<meta name="twitter:title" content="SVM">
+<meta name="twitter:description" content="1.它是一種二類分類模型，目的是找出margine(support vector 到 hyper plane的距離)最大的模型。 2.support vector : 在 margin 邊界上的點  $$magin = |\frac{w^T}{||w||}(x-x’)| = \frac{1}{||w||}|w^Tx+b|$$ $$因為  y_n(w^Tx_n+b)&amp;gt;0 (分類正確)$$ $$">
 
 
 
@@ -128,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://citya1472581234.github.io/2018/11/14/車道偵測/">
+  <link rel="canonical" href="https://citya1472581234.github.io/archives/75378e04.html">
 
 
 
 
 
-  <title>車道偵測 | Yo</title>
+  <title>SVM | Yo</title>
   
 
 
@@ -251,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://citya1472581234.github.io/2018/11/14/車道偵測/">
+    <link itemprop="mainEntityOfPage" href="https://citya1472581234.github.io/archives/75378e04.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yo">
@@ -268,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">車道偵測</h1>
+          <h1 class="post-title" itemprop="name headline">SVM</h1>
         
 
         <div class="post-meta">
@@ -280,8 +272,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-11-14T21:15:30+08:00">
-                2018-11-14
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-12-04T18:41:44+08:00">
+                2018-12-04
               </time>
             
 
@@ -303,8 +295,8 @@
               
               
                 <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/個人開發/" itemprop="url" rel="index">
-                    <span itemprop="name">個人開發</span>
+                  <a href="/categories/機器學習/" itemprop="url" rel="index">
+                    <span itemprop="name">機器學習</span>
                   </a>
                 </span>
 
@@ -345,38 +337,37 @@
       
 
       
-        <ul>
-<li><p>cycle gan</p>
+        <p>1.它是一種二類分類模型，目的是找出<strong>margine</strong>(support vector 到 hyper plane的距離)最大的模型。</p>
+<p>2.support vector : 在 margin 邊界上的點</p>
 <ul>
-<li><p>整個cycle可以看成是一個autoencoder,兩個generator看成是encoder和decoder,而兩個discriminator則是準則,整體架構如下:</p>
-<p><img src="/2018/11/14/車道偵測/cyclegan.png" alt="cyclegan"></p>
-</li>
-<li><p>loss 方面,有兩個判別網路的loss,還有兩個生成網路的loss,最後是L1 loss(希望生成圖像，與輸入圖像很接近)</p>
-<p><img src="/2018/11/14/車道偵測/cycleganloss.png" alt="cycleganloss"></p>
+<li><p>$$<br>magin = |\frac{w^T}{||w||}(x-x’)| = \frac{1}{||w||}|w^Tx+b|<br>$$</p>
+<p>$$<br>因為  y_n(w^Tx_n+b)&gt;0 (分類正確)<br>$$</p>
+<p>$$<br>margin(b,w) = min_{n=1,..,N}\frac{1}{||w||}y_n(w^Tx_n+b)<br>$$</p>
+<p>$$<br>我們可以令 min y_n(w^Tx_n+b) = 1 ，不會影響分類結果，margin=\frac{1}{||w||}<br>$$</p>
+<p>$$<br>我們目標為最大化margin = \frac{1}{||w||}，等同於min_{b,w}\frac{1}{2}w^Tw<br>$$</p>
+<p>$$<br>e.q. y_n(w^Tx_n+b) &gt;1.5 ，我們可以scale (\frac{b}{1.5},\frac{w}{1.5})，<br>$$</p>
+<p>$$<br>所以 y_n(w^Tx_n+b) &gt;1也是可以的 ，修正條件為  y_n(w^Tx_n+b)\geq1<br>$$</p>
 </li>
 </ul>
-</li>
-<li><p>pix2pix</p>
 <ul>
-<li>判別網路將兩張圖片組成一個 pair ,輸入從三通道變六通道的疊加圖,整體結構如下:</li>
-</ul>
-<p>​      <img src="/2018/11/14/車道偵測/pix2pix.jpg" alt="pix2pix"></p>
-<ul>
-<li><p>patch gan</p>
-<p>將圖像分成NxN的patch,來減少運行時間,還能更好的處理大圖片的細節<img src="/2018/11/14/車道偵測/patch.jpg" alt="patch"></p>
-</li>
-<li><p>loss 方面,有一個gan的loss,和L1 loss</p>
-<p><img src="/2018/11/14/車道偵測/pix2pixloss.jpeg" alt="pix2pixloss"></p>
-</li>
-<li><p>Unet</p>
-<p>類似 auto encoder  + residual , 來減輕訓練的負擔 ,整體結構如下:<img src="/2018/11/14/車道偵測/unet.jpg" alt="unet"></p>
+<li><p>我們可以使用<strong>QP(quaratic programming)求解</strong>，再使用<strong>（Lagrange Duality）</strong>將約束條件合併到目標中。<br>$$<br>y_n(w^Tx_n+b)\geq1<br>$$</p>
+<p>$$<br>L(w,b,\alpha)=\frac{1}{2}||w||^2-\sum^{n}_{i=1}\alpha_i(y_i(w^Tx_i+b)-1)<br>$$</p>
+<p>$$<br>SVM = min_{b,w}(max_{all \alpha_n\geq0}L(b,w,\alpha))<br>$$</p>
+<p>$$<br>如果沒有符合條件，L 會趨近無限大，如果符合條件，L會等於\frac{1}{2}||w||^2<br>$$</p>
+<p>$$<br>Lagrange 是把問題變得看似沒有約束條件，把條件併入問題中<br>$$</p>
 </li>
 </ul>
-</li>
-<li><p>convolution auto encoder</p>
 <ul>
-<li>將圖片經由conv壓縮成向量,在deconv重構成原來圖片<img src="/2018/11/14/車道偵測/cae.png" alt="cae"></li>
-</ul>
+<li><p>$$<br>min_{b,w}(max_{all \alpha_n\geq0}L(b,w,\alpha)) \geq max_{all \alpha_n\geq0}(min_{b,w}L(b,w,\alpha))<br>$$</p>
+<p>這稱為 <strong>（Lagrange Duality）</strong>。<br>$$<br>\frac{\partial L(b,w,\alpha)}{\partial b}=-\sum^{N}_{n=1}\alpha_ny_n=0 ，代回原式可把b消除<br>$$</p>
+<p>$$<br>\frac{\partial L(b,w,\alpha)}{\partial w_i}=w_i-\sum^{N}_{n=1}\alpha_ny_nz_{n,i}=0，代回原式<br>$$</p>
+<p>$$<br>max_{all \alpha_n\geq0,\sum yn\alpha_n=0,w=\sum \alpha_ny_nz_n}-\frac{1}{2}||\sum^{N}_{n=1}\alpha_ny_nz_n||^2+\sum^{N}_{n=1}\alpha_n<br>$$</p>
+<p>$$<br>min_{all \alpha_n\geq0,\sum yn\alpha_n=0,w=\sum \alpha_ny_nz_n}\frac{1}{2}||\sum^{N}_{n=1}\alpha_ny_nz_n||^2-\sum^{N}_{n=1}\alpha_n<br>$$</p>
+<p>$$<br>min \frac{1}{2}A^TQA+P^TA ， subject \quad \alpha_j^TA\geq c_i\quad for\quad i=1,2,…<br>$$</p>
+<p>​         <strong>代入 QP 即可以求出。</strong></p>
+</li>
+<li><p>kernel function </p>
+<p>透過核函數將低維映射到高維空間，進一步將平面上不好分開的區間分開，且<strong>避開了在高維空間中進行計算</strong>。<br>$$<br>f(x)=\sum^{n}_{i=1}\alpha_iy_i&lt;x_i,x&gt;+b<br>$$<br>映射成<br>$$<br>\sum^{n}_{i=1}\alpha_iy_i&lt;\phi(x_i),\phi(x)&gt;+b<br>$$</p>
 </li>
 </ul>
 
@@ -396,11 +387,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/個人開發/" rel="tag"># 個人開發</a>
-          
-            <a href="/tags/pytorch/" rel="tag"># pytorch</a>
-          
-            <a href="/tags/GAN/" rel="tag"># GAN</a>
+            <a href="/tags/機器學習/" rel="tag"># 機器學習</a>
           
         </div>
       
@@ -413,15 +400,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/archives/undefined.html" rel="next" title="linear_regression">
+                <i class="fa fa-chevron-left"></i> linear_regression
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/29/VCdimention/" rel="prev" title="VC dimention">
-                VC dimention <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -570,7 +557,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 強力驅動</div>
+  <div class="powered-by">由 <a class="theme-link" href="http://hexo.io" rel="external nofollow">Hexo</a> 強力驅動</div>
 
 
 
