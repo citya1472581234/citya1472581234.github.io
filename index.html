@@ -239,6 +239,145 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://citya1472581234.github.io/archives/a83ed71f.html">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://github.com/citya1472581234/citya1472581234.github.io/blob/master/uploads/pic.jpg?raw=true">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/archives/a83ed71f.html" itemprop="url">blend_and_bagging</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-12-05T09:13:17+08:00">
+                2018-12-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li><p>blending 意思是混和我們的模型<br>$$<br>\begin{align}<br>G(x)=&amp;\frac{1}{T}\sum^{T}_{t=1}g_t(x)\avg((g_t(x)-f(x))^2)=&amp;avg(g_t^2-2g_tf+f^2)\=&amp;avg(g_t^2)-2Gf+f^2\=&amp;avg(g_t^2)-2G^2+G^2+(G-f)^2\=&amp;avg((g_t-G)^2)+(G-f)^2<br>\avg(E_{out}(g_t)) =&amp; avg(\epsilon(g_t-G)^2)+(G-f)^2<br>\end{align}<br>$$<br>所以將模型平均後的 error 可能比隨意選取的模型error還要來得小<br>$$<br>avg(\epsilon(g_t-G)^2) 表示各個模型之間的差異<br>$$<br>我們也可以用很多不同的方式做blending ，不一定是線性。</p>
+</li>
+<li><p>bagging (boostrap aggregation)</p>
+<p>給定一個大小為n的訓練集D，bagging 算法從中任意選出m個大小為n’的子集合，作為新的訓練集，之後再將其平均或者投票，得到bagging的結果。</p>
+</li>
+<li><p>adaptive boosting </p>
+<ol>
+<li><p>obtain  $g_t by A(D,u^{(t)}) ，u^{(t)}一開始為\frac{1}{N}(uniform)$</p>
+</li>
+<li><p>update $u^{(t)} to u^{(t+1)} by A_t = (\frac{1-E}{E})^{0.5}$</p>
+<p>E 為錯誤率，表示錯得越少我們給越大的權重</p>
+</li>
+<li><p>compute $\alpha_t = ln(A_t)$</p>
+</li>
+<li><p>return $G(x)=sign(\sum^{T}{t=1)\alpha_tg_t(x)$</p>
+</li>
+</ol>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://citya1472581234.github.io/archives/75378e04.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
@@ -359,10 +498,17 @@
 <p>$$<br>max_{all \alpha_n\geq0,\sum yn\alpha_n=0,w=\sum \alpha_ny_nz_n}-\frac{1}{2}||\sum^{N}_{n=1}\alpha_ny_nz_n||^2+\sum^{N}_{n=1}\alpha_n<br>$$</p>
 <p>$$<br>min_{all \alpha_n\geq0,\sum yn\alpha_n=0,w=\sum \alpha_ny_nz_n}\frac{1}{2}||\sum^{N}_{n=1}\alpha_ny_nz_n||^2-\sum^{N}_{n=1}\alpha_n<br>$$</p>
 <p>$$<br>min \frac{1}{2}A^TQA+P^TA ， subject \quad \alpha_j^TA\geq c_i\quad for\quad i=1,2,…<br>$$</p>
-<p>​         <strong>代入 QP 即可以求出。</strong></p>
+<p>​         <strong>代入 QP 利用SMO算法即可以求出。</strong></p>
 </li>
 <li><p>kernel function </p>
 <p>透過核函數將低維映射到高維空間，進一步將平面上不好分開的區間分開，且<strong>避開了在高維空間中進行計算</strong>。<br>$$<br>f(x)=\sum^{n}_{i=1}\alpha_iy_i&lt;x_i,x&gt;+b<br>$$<br>映射成<br>$$<br>\sum^{n}_{i=1}\alpha_iy_i&lt;\phi(x_i),\phi(x)&gt;+b<br>$$</p>
+</li>
+</ul>
+<p>​       可以使用很多不同的 kernel function，例如 : linear 、polynomial、gaussian。</p>
+<ul>
+<li><p>soft margin SVM : 因為雜訊關係，可能有些數據偏離原本位子很多，造成margin嚴重縮小，我們稱該點為outlier，所以提出 soft margin SVM，我們可以忽略一些 outlier ，來讓我們的結果好一點。<br>$$<br>y_i(w^Tx_i+b)\geq 1-\zeta_i 改成 y_i(w^Tx_i+b)\geq 1-\zeta_i<br>$$</p>
+<p>$$<br>\zeta_i\geq0 稱為(slack\quad variable)，為允許數據點偏離 margin的量<br>$$</p>
+<p>$$<br>所以目標函數改為 min \frac{1}{2}||w||^2+C\sum^{n}_{i=1}\zeta_i<br>$$</p>
 </li>
 </ul>
 
@@ -1110,7 +1256,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>

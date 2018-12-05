@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Yo">
 <meta property="og:description" content="1.它是一種二類分類模型，目的是找出margine(support vector 到 hyper plane的距離)最大的模型。 2.support vector : 在 margin 邊界上的點  $$magin = |\frac{w^T}{||w||}(x-x’)| = \frac{1}{||w||}|w^Tx+b|$$ $$因為  y_n(w^Tx_n+b)&amp;gt;0 (分類正確)$$ $$">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:updated_time" content="2018-12-04T12:59:33.373Z">
+<meta property="og:updated_time" content="2018-12-05T01:07:23.768Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SVM">
 <meta name="twitter:description" content="1.它是一種二類分類模型，目的是找出margine(support vector 到 hyper plane的距離)最大的模型。 2.support vector : 在 margin 邊界上的點  $$magin = |\frac{w^T}{||w||}(x-x’)| = \frac{1}{||w||}|w^Tx+b|$$ $$因為  y_n(w^Tx_n+b)&amp;gt;0 (分類正確)$$ $$">
@@ -364,10 +364,17 @@
 <p>$$<br>max_{all \alpha_n\geq0,\sum yn\alpha_n=0,w=\sum \alpha_ny_nz_n}-\frac{1}{2}||\sum^{N}_{n=1}\alpha_ny_nz_n||^2+\sum^{N}_{n=1}\alpha_n<br>$$</p>
 <p>$$<br>min_{all \alpha_n\geq0,\sum yn\alpha_n=0,w=\sum \alpha_ny_nz_n}\frac{1}{2}||\sum^{N}_{n=1}\alpha_ny_nz_n||^2-\sum^{N}_{n=1}\alpha_n<br>$$</p>
 <p>$$<br>min \frac{1}{2}A^TQA+P^TA ， subject \quad \alpha_j^TA\geq c_i\quad for\quad i=1,2,…<br>$$</p>
-<p>​         <strong>代入 QP 即可以求出。</strong></p>
+<p>​         <strong>代入 QP 利用SMO算法即可以求出。</strong></p>
 </li>
 <li><p>kernel function </p>
 <p>透過核函數將低維映射到高維空間，進一步將平面上不好分開的區間分開，且<strong>避開了在高維空間中進行計算</strong>。<br>$$<br>f(x)=\sum^{n}_{i=1}\alpha_iy_i&lt;x_i,x&gt;+b<br>$$<br>映射成<br>$$<br>\sum^{n}_{i=1}\alpha_iy_i&lt;\phi(x_i),\phi(x)&gt;+b<br>$$</p>
+</li>
+</ul>
+<p>​       可以使用很多不同的 kernel function，例如 : linear 、polynomial、gaussian。</p>
+<ul>
+<li><p>soft margin SVM : 因為雜訊關係，可能有些數據偏離原本位子很多，造成margin嚴重縮小，我們稱該點為outlier，所以提出 soft margin SVM，我們可以忽略一些 outlier ，來讓我們的結果好一點。<br>$$<br>y_i(w^Tx_i+b)\geq 1-\zeta_i 改成 y_i(w^Tx_i+b)\geq 1-\zeta_i<br>$$</p>
+<p>$$<br>\zeta_i\geq0 稱為(slack\quad variable)，為允許數據點偏離 margin的量<br>$$</p>
+<p>$$<br>所以目標函數改為 min \frac{1}{2}||w||^2+C\sum^{n}_{i=1}\zeta_i<br>$$</p>
 </li>
 </ul>
 
@@ -409,6 +416,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/archives/a83ed71f.html" rel="prev" title="blend_and_bagging">
+                blend_and_bagging <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -478,7 +489,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">文章</span>
                 </a>
               </div>

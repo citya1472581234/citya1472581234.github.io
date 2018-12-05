@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="機器學習,">
+  <meta name="keywords" content="deeplearning,machinelearning,AI,YO">
 
 
 
@@ -79,21 +79,17 @@
 
 
 
-<meta name="description" content="解析解 :$$E(w) = \frac{1}{N} ||Xw-y||^2=\frac{1}{N}(w^Tx^Txw-2w^Tx^Ty+y^Ty)$$ $$\nabla E_{in}(w)=\frac{2}{N}(X^TXW-X^Ty)$$ $$W_{LIN} = (X^TX)^{-1}X^T y$$  程式碼在這 !!! https://github.com/citya1472581234/mac">
-<meta name="keywords" content="機器學習">
+<meta name="description" content="blending 意思是混和我們的模型$$\begin{align}G(x)=&amp;amp;\frac{1}{T}\sum^{T}_{t=1}g_t(x)\avg((g_t(x)-f(x))^2)=&amp;amp;avg(g_t^2-2g_tf+f^2)\=&amp;amp;avg(g_t^2)-2Gf+f^2\=&amp;amp;avg(g_t^2)-2G^2+G^2+(G-f)^2\=&amp;amp;avg((g_t-G)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="linear_regression">
-<meta property="og:url" content="https://citya1472581234.github.io/archives/4970fdc9.html">
+<meta property="og:title" content="blend_and_bagging">
+<meta property="og:url" content="https://citya1472581234.github.io/archives/a83ed71f.html">
 <meta property="og:site_name" content="Yo">
-<meta property="og:description" content="解析解 :$$E(w) = \frac{1}{N} ||Xw-y||^2=\frac{1}{N}(w^Tx^Txw-2w^Tx^Ty+y^Ty)$$ $$\nabla E_{in}(w)=\frac{2}{N}(X^TXW-X^Ty)$$ $$W_{LIN} = (X^TX)^{-1}X^T y$$  程式碼在這 !!! https://github.com/citya1472581234/mac">
+<meta property="og:description" content="blending 意思是混和我們的模型$$\begin{align}G(x)=&amp;amp;\frac{1}{T}\sum^{T}_{t=1}g_t(x)\avg((g_t(x)-f(x))^2)=&amp;amp;avg(g_t^2-2g_tf+f^2)\=&amp;amp;avg(g_t^2)-2Gf+f^2\=&amp;amp;avg(g_t^2)-2G^2+G^2+(G-f)^2\=&amp;amp;avg((g_t-G)">
 <meta property="og:locale" content="zh-tw">
-<meta property="og:image" content="https://citya1472581234.github.io/archives/linear-regression/train.jpg">
-<meta property="og:image" content="https://citya1472581234.github.io/archives/linear-regression/error.jpg">
-<meta property="og:updated_time" content="2018-12-04T13:10:03.335Z">
+<meta property="og:updated_time" content="2018-12-05T02:41:09.501Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="linear_regression">
-<meta name="twitter:description" content="解析解 :$$E(w) = \frac{1}{N} ||Xw-y||^2=\frac{1}{N}(w^Tx^Txw-2w^Tx^Ty+y^Ty)$$ $$\nabla E_{in}(w)=\frac{2}{N}(X^TXW-X^Ty)$$ $$W_{LIN} = (X^TX)^{-1}X^T y$$  程式碼在這 !!! https://github.com/citya1472581234/mac">
-<meta name="twitter:image" content="https://citya1472581234.github.io/archives/linear-regression/train.jpg">
+<meta name="twitter:title" content="blend_and_bagging">
+<meta name="twitter:description" content="blending 意思是混和我們的模型$$\begin{align}G(x)=&amp;amp;\frac{1}{T}\sum^{T}_{t=1}g_t(x)\avg((g_t(x)-f(x))^2)=&amp;amp;avg(g_t^2-2g_tf+f^2)\=&amp;amp;avg(g_t^2)-2Gf+f^2\=&amp;amp;avg(g_t^2)-2G^2+G^2+(G-f)^2\=&amp;amp;avg((g_t-G)">
 
 
 
@@ -123,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="https://citya1472581234.github.io/archives/4970fdc9.html">
+  <link rel="canonical" href="https://citya1472581234.github.io/archives/a83ed71f.html">
 
 
 
 
 
-  <title>linear_regression | Yo</title>
+  <title>blend_and_bagging | Yo</title>
   
 
 
@@ -246,7 +242,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://citya1472581234.github.io/archives/4970fdc9.html">
+    <link itemprop="mainEntityOfPage" href="https://citya1472581234.github.io/archives/a83ed71f.html">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yo">
@@ -263,7 +259,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">linear_regression</h1>
+          <h1 class="post-title" itemprop="name headline">blend_and_bagging</h1>
         
 
         <div class="post-meta">
@@ -275,8 +271,8 @@
               
                 <span class="post-meta-item-text">發表於</span>
               
-              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-12-03T19:50:24+08:00">
-                2018-12-03
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-12-05T09:13:17+08:00">
+                2018-12-05
               </time>
             
 
@@ -285,28 +281,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分類於</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
-                  <a href="/categories/機器學習/" itemprop="url" rel="index">
-                    <span itemprop="name">機器學習</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -340,18 +314,26 @@
       
 
       
-        <h3 id="解析解"><a href="#解析解" class="headerlink" title="解析解 :"></a>解析解 :</h3><p>$$<br>E(w) = \frac{1}{N} ||Xw-y||^2=\frac{1}{N}(w^Tx^Txw-2w^Tx^Ty+y^Ty)<br>$$</p>
-<p>$$<br>\nabla E_{in}(w)=\frac{2}{N}(X^TXW-X^Ty)<br>$$</p>
-<p>$$<br>W_{LIN} = (X^TX)^{-1}X^T y<br>$$</p>
-<ul>
-<li><p>程式碼在這 !!!</p>
-<p><a href="https://github.com/citya1472581234/machine_learning/tree/master/linear_regression" target="_blank" rel="noopener">https://github.com/citya1472581234/machine_learning/tree/master/linear_regression</a></p>
+        <ul>
+<li><p>blending 意思是混和我們的模型<br>$$<br>\begin{align}<br>G(x)=&amp;\frac{1}{T}\sum^{T}_{t=1}g_t(x)\avg((g_t(x)-f(x))^2)=&amp;avg(g_t^2-2g_tf+f^2)\=&amp;avg(g_t^2)-2Gf+f^2\=&amp;avg(g_t^2)-2G^2+G^2+(G-f)^2\=&amp;avg((g_t-G)^2)+(G-f)^2<br>\avg(E_{out}(g_t)) =&amp; avg(\epsilon(g_t-G)^2)+(G-f)^2<br>\end{align}<br>$$<br>所以將模型平均後的 error 可能比隨意選取的模型error還要來得小<br>$$<br>avg(\epsilon(g_t-G)^2) 表示各個模型之間的差異<br>$$<br>我們也可以用很多不同的方式做blending ，不一定是線性。</p>
 </li>
-<li><p>以下是實作 linear  regression 的 曲線擬合的情形(設定多項式order 1~9)與 error的變化。</p>
-<p><img src="/archives/linear-regression/train.jpg" alt="train"></p>
+<li><p>bagging (boostrap aggregation)</p>
+<p>給定一個大小為n的訓練集D，bagging 算法從中任意選出m個大小為n’的子集合，作為新的訓練集，之後再將其平均或者投票，得到bagging的結果。</p>
+</li>
+<li><p>adaptive boosting </p>
+<ol>
+<li><p>obtain  $g_t by A(D,u^{(t)}) ，u^{(t)}一開始為\frac{1}{N}(uniform)$</p>
+</li>
+<li><p>update $u^{(t)} to u^{(t+1)} by A_t = (\frac{1-E}{E})^{0.5}$</p>
+<p>E 為錯誤率，表示錯得越少我們給越大的權重</p>
+</li>
+<li><p>compute $\alpha_t = ln(A_t)$</p>
+</li>
+<li><p>return $G(x)=sign(\sum^{T}{t=1)\alpha_tg_t(x)$</p>
+</li>
+</ol>
 </li>
 </ul>
-<p><img src="/archives/linear-regression/error.jpg" alt="error"></p>
 
       
     </div>
@@ -367,12 +349,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/機器學習/" rel="tag"># 機器學習</a>
-          
-        </div>
-      
 
       
       
@@ -382,8 +358,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/archives/fb8375c5.html" rel="next" title="logistic_regression">
-                <i class="fa fa-chevron-left"></i> logistic_regression
+              <a href="/archives/75378e04.html" rel="next" title="SVM">
+                <i class="fa fa-chevron-left"></i> SVM
               </a>
             
           </div>
@@ -391,10 +367,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/archives/75378e04.html" rel="prev" title="SVM">
-                SVM <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -446,17 +418,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目錄
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            本站概覽
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -528,22 +491,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#解析解"><span class="nav-number">1.</span> <span class="nav-text">解析解 :</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
