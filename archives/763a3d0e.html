@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="deeplearning,machinelearning,AI,YO">
+  <meta name="keywords" content="機器學習,">
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Yo">
-<meta property="og:url" content="https://citya1472581234.github.io/archives/2018/11/index.html">
+<meta name="description" content="decision tree在訓練過程中決策樹會問出一系列的問題。首先會從最後上方的樹根開始將資料的特徵將資料分割到不同邊(比方說依據溫度將資料切成三份)，分割的原則是：這樣的分割要能得到最大的資訊增益(Information gain, 簡稱IG)。 Information gain計算方式 :$$IG(D_p,f) = I(D_p)-\sum^{m}_{j=1}\frac{N_j}{N_p}I(">
+<meta name="keywords" content="機器學習">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DecisionTree">
+<meta property="og:url" content="https://citya1472581234.github.io/archives/763a3d0e.html">
 <meta property="og:site_name" content="Yo">
+<meta property="og:description" content="decision tree在訓練過程中決策樹會問出一系列的問題。首先會從最後上方的樹根開始將資料的特徵將資料分割到不同邊(比方說依據溫度將資料切成三份)，分割的原則是：這樣的分割要能得到最大的資訊增益(Information gain, 簡稱IG)。 Information gain計算方式 :$$IG(D_p,f) = I(D_p)-\sum^{m}_{j=1}\frac{N_j}{N_p}I(">
 <meta property="og:locale" content="zh-tw">
+<meta property="og:updated_time" content="2018-12-07T06:27:21.896Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Yo">
+<meta name="twitter:title" content="DecisionTree">
+<meta name="twitter:description" content="decision tree在訓練過程中決策樹會問出一系列的問題。首先會從最後上方的樹根開始將資料的特徵將資料分割到不同邊(比方說依據溫度將資料切成三份)，分割的原則是：這樣的分割要能得到最大的資訊增益(Information gain, 簡稱IG)。 Information gain計算方式 :$$IG(D_p,f) = I(D_p)-\sum^{m}_{j=1}\frac{N_j}{N_p}I(">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://citya1472581234.github.io/archives/2018/11/">
+  <link rel="canonical" href="https://citya1472581234.github.io/archives/763a3d0e.html">
 
 
 
 
 
-  <title>歸檔 | Yo</title>
+  <title>DecisionTree | Yo</title>
   
 
 
@@ -140,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -224,107 +229,195 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共計 8 篇文章。 繼續努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://citya1472581234.github.io/archives/763a3d0e.html">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://github.com/citya1472581234/citya1472581234.github.io/blob/master/uploads/pic.jpg?raw=true">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Yo">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/archives/1921a836.html" itemprop="url">
-              
-                <span itemprop="name">VC dimention</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">DecisionTree</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-29T21:52:48+08:00" content="2018-11-29">
-          11-29
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">發表於</span>
+              
+              <time title="創建於" itemprop="dateCreated datePublished" datetime="2018-12-07T11:01:53+08:00">
+                2018-12-07
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分類於</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/機器學習/" itemprop="url" rel="index">
+                    <span itemprop="name">機器學習</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>本文總閱讀量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/archives/d155c7f9.html" itemprop="url">
-              
-                <span itemprop="name">車道偵測</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2018-11-14T21:15:30+08:00" content="2018-11-14">
-          11-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <h1 id="decision-tree"><a href="#decision-tree" class="headerlink" title="decision tree"></a>decision tree</h1><p>在訓練過程中決策樹會問出一系列的問題。首先會從最後上方的樹根開始將資料的特徵將資料分割到不同邊(比方說依據溫度將資料切成三份)，分割的原則是：這樣的分割要能得到最大的資訊增益(<strong>Information gain</strong>, 簡稱IG)。</p>
+<p><strong>Information gain</strong>計算方式 :<br>$$<br>IG(D_p,f) = I(D_p)-\sum^{m}_{j=1}\frac{N_j}{N_p}I(D_j)<br>$$<br>常見的計算資訊量的方式有下列兩種 :</p>
+<ul>
+<li>Entropy<br>$$<br>I_H(t) = -\sum^{c}_{i=1}p(i|t)log_2p(i|t)<br>$$</li>
+</ul>
+<ul>
+<li>Gini<br>$$<br>I_G(t) = \sum^{c}<em>{i=1}p(i|t)(1-p(i|t)) = 1-\sum^{c}</em>{i=1}p(i|t)^2<br>$$</li>
+</ul>
+<p>訓練過程中，藉由找到最大IG的方式來確定分割問題的方式。</p>
+<p><strong>pruning(剪枝)</strong></p>
+<p>因為 decision tree 容易 overfitting 。我們稱只顧眼前利益而採限制條件的方法為「greedy」，ID3, C4.5以及CART等大部份的決策樹模型都是屬於此類，此種方式比較不會考慮後果而肓目的分枝生長，所以才有Tree pruning的方法產生，以避免樹過度生長而造成過度擬合問題。</p>
+<h1 id="random-forest"><a href="#random-forest" class="headerlink" title="random forest"></a>random forest</h1><ol>
+<li>隨機從資料集中選擇部分資料出來訓練 (boostrap)(bagging)</li>
+<li>將部分資料做成 decision tree</li>
+<li><p>最後 ensemble 各個分類器，來提升結果</p>
+<p>random forest 條件 :</p>
+</li>
+</ol>
+<ul>
+<li>各個分類器之間須具有差異性。</li>
+<li>每個分類器的準確度必須大於0.5。</li>
+</ul>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/機器學習/" rel="tag"># 機器學習</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/archives/55741b30.html" rel="next" title="adaboost">
+                <i class="fa fa-chevron-left"></i> adaboost
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -332,6 +425,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -352,8 +449,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目錄
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            本站概覽
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -425,6 +531,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#decision-tree"><span class="nav-number">1.</span> <span class="nav-text">decision tree</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#random-forest"><span class="nav-number">2.</span> <span class="nav-text">random forest</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -592,6 +714,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
