@@ -314,7 +314,7 @@
 <li><p>blending 意思是混和我們的模型<br>$$<br>\begin{align}<br>G(x)=&amp;\frac{1}{T}\sum^{T}_{t=1}g_t(x)\avg((g_t(x)-f(x))^2)=&amp;avg(g_t^2-2g_tf+f^2)\=&amp;avg(g_t^2)-2Gf+f^2\=&amp;avg(g_t^2)-2G^2+G^2+(G-f)^2\=&amp;avg((g_t-G)^2)+(G-f)^2<br>\avg(E_{out}(g_t)) =&amp; avg(\epsilon(g_t-G)^2)+(G-f)^2<br>\end{align}<br>$$<br>所以將模型平均後的 error 可能比隨意選取的模型error還要來得小<br>$$<br>avg(\epsilon(g_t-G)^2) 表示各個模型之間的差異<br>$$<br>我們也可以用很多不同的方式做blending ，不一定是線性。</p>
 </li>
 <li><p>bagging (boostrap aggregation)</p>
-<p>給定一個大小為n的訓練集D，bagging 算法從中任意選出m個大小為n’的子集合，作為新的訓練集，之後再將其平均或者投票，得到bagging的結果。</p>
+<p>給定一個大小為n的訓練集D，bagging 算法從中任意選出m個大小為n’的子集合，作為新的訓練集，之後再將其平均或者投票，得到bagging的結果，這種抽樣的方式在統計上叫做boostrap。</p>
 </li>
 <li><p>adaptive boosting </p>
 <ol>
